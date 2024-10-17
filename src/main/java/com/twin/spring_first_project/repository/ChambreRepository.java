@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 
 public interface ChambreRepository extends JpaRepository<Chambre,Long> {
-    List<Chambre> findByBlocNomBloc(String nomBloc);
+    /*List<Chambre> findByBlocNomBloc(String nomBloc);
     List<Chambre> findByTypeCAndBlocNomBloc(String type,String nom);
     List<Chambre> findByReservationsEstValide(Boolean valid);
     List<Chambre> findByBlocNomBlocAndBlocCapaciteBloc(String nom,long capacite);
@@ -23,4 +23,7 @@ public interface ChambreRepository extends JpaRepository<Chambre,Long> {
     List<Chambre> retrieveChambreByValidity(@Param("valide")Boolean valide);
     @Query("select c from Chambre c where c.bloc.nomBloc=:nom and c.bloc.capaciteBloc>:nombre")
     List<Chambre> retrieveChambreByNomBlocAndCapacity(@Param("nom")String nom,@Param("nombre")long nombre);
+
+*/
 }
+
