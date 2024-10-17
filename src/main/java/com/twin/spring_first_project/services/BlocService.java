@@ -2,11 +2,15 @@ package com.twin.spring_first_project.services;
 
 import com.twin.spring_first_project.entities.Bloc;
 import com.twin.spring_first_project.repository.BlocRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-public class BlocServide implements IBlocService{
+@Service
+@AllArgsConstructor
+public class BlocService implements IBlocService{
     BlocRepository blocRepository;
     @Override
     public List<Bloc> retrieveAllBloc() {
