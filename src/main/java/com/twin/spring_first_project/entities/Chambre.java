@@ -1,10 +1,16 @@
 package com.twin.spring_first_project.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Set;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Getter
+@Setter
+@Builder
 @Table(name = "chambre")
 public class Chambre {
     @Id
@@ -16,38 +22,7 @@ public class Chambre {
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
 
-    public Chambre() {
-    }
 
-    public Chambre(long idChambre, long numeroChambre, TypeChambre typeC) {
-        this.idChambre = idChambre;
-        this.numeroChambre = numeroChambre;
-        this.typeC = typeC;
-    }
-
-    public long getIdChambre() {
-        return idChambre;
-    }
-
-    public void setIdChambre(long idChambre) {
-        this.idChambre = idChambre;
-    }
-
-    public long getNumeroChambre() {
-        return numeroChambre;
-    }
-
-    public void setNumeroChambre(long numeroChambre) {
-        this.numeroChambre = numeroChambre;
-    }
-
-    public TypeChambre getTypeC() {
-        return typeC;
-    }
-
-    public void setTypeC(TypeChambre typeC) {
-        this.typeC = typeC;
-    }
     @ManyToOne
     private Bloc bloc;
     @OneToMany

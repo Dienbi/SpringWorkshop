@@ -1,12 +1,17 @@
 package com.twin.spring_first_project.entities;
 
-import com.twin.spring_first_project.entities.Foyer;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Set;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
 @Table( name = "Bloc")
 public class Bloc implements Serializable{
     @Id

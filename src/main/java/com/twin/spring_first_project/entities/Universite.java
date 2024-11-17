@@ -1,9 +1,15 @@
 package com.twin.spring_first_project.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.Comment;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Getter
+@Setter
+@Builder
 @Table(name = "universite")
 public class Universite {
     @Id

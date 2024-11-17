@@ -10,4 +10,8 @@ public interface IEtudiantService {
     Etudiant updateEtudiant(Etudiant e);
     Optional<Etudiant> retrieveEtudiant(Long idEtudiant);
     void removeEtudiant(Long idEtudiant);
+
+    Etudiant addEtudiant(Etudiant e);
+    Etudiant affecterEtudiantAReservation (String nomEt, String prenomEt, String idReservation) ;
+
 }

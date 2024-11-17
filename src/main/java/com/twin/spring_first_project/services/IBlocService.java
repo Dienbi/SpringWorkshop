@@ -13,4 +13,7 @@ public interface IBlocService {
     Bloc updateBloc(Bloc b);
     Optional<Bloc> retrieveBloc(Long idBloc);
     void removeBloc(Long idBloc);
+
+    Bloc addBloc(Bloc b);
+
 }

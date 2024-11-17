@@ -27,10 +27,10 @@ public class FoyerService implements IFoyerService{
         return foyerRepository.save(f);
     }
 
-    @Override
-    public Foyer retrieveFoyer(Long idFoyer) {
-        return foyerRepository.findById(idFoyer).orElse(null);
-    }
+        @Override
+        public Foyer retrieveFoyer(Long idFoyer) {
+            return foyerRepository.findById(idFoyer).orElse(null);
+        }
 
     @Override
     public void removeFoyer(Long idFoyer) {

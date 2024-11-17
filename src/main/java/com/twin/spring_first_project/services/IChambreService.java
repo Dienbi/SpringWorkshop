@@ -10,4 +10,16 @@ public interface IChambreService {
     Chambre updateChambre(Chambre c);
     Optional<Chambre> retrieveChambre(Long idChambre);
     void removeChambre(Long idChambre);
+
+    Chambre addChambre(Chambre c);
+
+    List<Chambre> retrieveChambreByBloc(String nom);
+
+    List<Chambre> retrievechambrebytype(String nom, String type);
+
+    List<Chambre> retrieveChambreByValidity(Boolean valide);
+
+    List<Chambre> retrieveChambreByNomBlocAndCapacity(String nom, long nombre);
+
+    List<Chambre> affecterBlocAuxChambres(String nomBloc, List<Long> numChambre);
 }
