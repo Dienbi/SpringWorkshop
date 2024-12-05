@@ -1,6 +1,7 @@
 package tn.esprit.tic.web.springprojrct.service;
 
 
+import org.springframework.scheduling.annotation.Scheduled;
 import tn.esprit.tic.web.springprojrct.entities.Etudiant;
 
 import java.util.HashMap;
@@ -15,5 +16,8 @@ public interface IEtudiantService {
     void removeEtudiant(Long idEtudiant);
      Etudiant affecterEtudiantAReservation(String nomEt, String prenomEt, Long idReservation);
     HashMap<String,Float > calculNouveauMontantInscriptionDesEtudiants() ;
+
+    @Scheduled(fixedRate = 6000)
+    void updateNouveauMontantInscriptionDesEtudiants();
 
 }

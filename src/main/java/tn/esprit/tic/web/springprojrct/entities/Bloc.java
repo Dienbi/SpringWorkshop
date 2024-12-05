@@ -22,8 +22,8 @@ public class Bloc {
     private Long idBloc;
     private String nomBloc;
     private Long capaciteBloc;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="bloc")
-    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="bloc",fetch = FetchType.EAGER)
+
     private Set<Chambre> chambres;
     @ManyToOne
     @JsonIgnore

@@ -83,8 +83,6 @@ etr.deleteById(idEtudiant);
             float nouveauMontant = etudiant.getMontantInscription() - tarif;
             etudiant.setMontantInscription((long) nouveauMontant);
             etr.save(etudiant);
-            System.out.println("Nouveau montant pour l'étudiant " + etudiant.getNomEtudiant() + " " + etudiant.getPrenomEtudiant() + " : " + nouveauMontant);
-
         });
     }
 
