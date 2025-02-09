@@ -14,7 +14,7 @@ public interface ChambreRepository  extends JpaRepository<Chambre, Long> {
     List<Chambre> findByBlocIdBlocAndBlocCapaciteBlocGreaterThan(Long blocId, Long capacite);
 
     List<Chambre> findByNumeroChambreIn(List<Long> numChambre);
-
+    List<Chambre> findByNumeroChambre(Long numChambre);
     @Query("select c from Chambre c where c.bloc.nomBloc=:nomBloc and c.typeC=:typeC")
     List<Chambre> findByNomBloc(@Param("nomBloc") String nomBloc, @Param("typeC") TypeChambre typeC);
 

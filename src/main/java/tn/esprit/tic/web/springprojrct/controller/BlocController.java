@@ -54,6 +54,10 @@ public class BlocController {
     public Bloc affecterChambresABloc(@PathVariable List<Long> numChambre, @PathVariable String nomBloc) {
         return blocService.affecterChambresABloc(numChambre,nomBloc);
     }
+    @PostMapping("/check-and-reassign-chambres")
+    public void checkAndReassignChambres() {
+        blocService.checkAndReassignChambres();
+    }
 
 }
 

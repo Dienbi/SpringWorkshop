@@ -5,5 +5,6 @@ import tn.esprit.tic.web.springprojrct.entities.Etudiant;
 
 public interface EtudiantRepository  extends JpaRepository<Etudiant,Long> {
     Etudiant findByNomEtudiantAndPrenomEtudiant(String nomEt,String prenomEt);
+    Etudiant findByCin(Long cin);
 
 }

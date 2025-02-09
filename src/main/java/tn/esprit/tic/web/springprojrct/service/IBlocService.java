@@ -15,6 +15,10 @@ public interface IBlocService {
 List<Bloc> findByFoyerUniversiteNomUniversite(String universite);
        List<Bloc>  retrieveBlocByUniversite(@Param("nom") String nom );
     Bloc affecterChambresABloc(List<Long> numChambre, String nomBloc);
-    }
+
+    void checkAndReassignChambres();
+
+    Bloc findAvailableBloc(List<Bloc> blocs);
+}
 
 
